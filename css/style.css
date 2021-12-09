@@ -616,6 +616,7 @@ body {
   padding-left: 16px;
   padding-top: 15px;
   padding-bottom: 15px;
+  color: rgba(255, 255, 255, 0.6);
 
   background-color: transparent;
 
@@ -623,13 +624,27 @@ body {
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+.subscription-input::placeholder{
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .subscription-btn{
+  height: 50px;
+  padding: 10px 28px 10px 29px;
+  margin-left: 12px;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--accent-color);
   color: var(--main-title-color);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -637,10 +652,6 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  
-  height: 50px;
-  padding: 10px 28px 10px 29px;
-  margin-left: 12px;
 }
 
 .subscription-btn-svg{
@@ -668,6 +679,8 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  padding: 40px;
 
   transform: scale(-1) translateY(0);
   transition: transform 750ms;
@@ -699,6 +712,133 @@ body {
   visibility: hidden;
   opacity: 0;
   pointer-events: 0;
+}
+
+.modal-title{
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-title-color);
+}
+
+.modal-form-input{
+  width: 100%;
+  height: 40px;
+
+  padding-left: 42px;
+  padding-right: 15px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--main-text-color);
+
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:hover,
+.modal-form-input:focus{
+  border-color: var(--accent-color);
+}
+
+.modal-form-input:focus + .input-icon{
+  fill: var(--accent-color);
+}
+.modal-form-input:hover+.input-icon{
+  fill: var(--accent-color);
+}
+
+.form-input-text{
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+}
+
+.modal-form-text{
+  width: 100%;
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+}
+
+.modal-form-text::placeholder{
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.input-wrap{
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+}
+
+.input-icon{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+              fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-text{
+  margin-top: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.check-text{
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+
+  display: flex;
+  align-items: center;
+}
+
+.check-item{
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--second-title-color);
+  border-radius: 2px;
+  margin-right: 7px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.check-icon{
+  fill: var(--main-title-color);
+}
+
+.modal-check:checked + .check-text .check-item{
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.contract{
+  margin-left: 2px;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.modal-btn{
+  
 }
 
 /*-----------------------------------portfolio----------------------------------*/
